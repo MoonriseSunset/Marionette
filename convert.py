@@ -14,7 +14,7 @@ operand = list(userput)
 #functions
 def charToDecimal(characterInput):
 
-    dec = int(format(ord(characterInput), "x"), 16)
+    dec = ord(characterInput)
 
     return dec
 
