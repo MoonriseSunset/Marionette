@@ -1,6 +1,3 @@
-#imports
-import math
-
 #variables
 
 charmap = ["▌", "▖", "▘"]
@@ -12,6 +9,7 @@ userput = input("Text to translate: ")
 operand = list(userput)
 
 #functions
+
 def charToDecimal(characterInput):
 
     dec = ord(characterInput)
@@ -39,10 +37,6 @@ def decToDollcode(userInput):
         workingOutput.append(charmap[int(mod)])
     
     return "".join(reversed(workingOutput))
-            
-
-    #print("".join(reversed(workingOutput)))
-    #print("")
 
 #main
 
