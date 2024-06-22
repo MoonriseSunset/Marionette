@@ -43,7 +43,7 @@ def decToDollcode(userInput):
 for i in operand:
 
     output.append(decToDollcode(i))
-    output.append("   ")
+    output.append(" ")
     
 
 print("".join(output))
