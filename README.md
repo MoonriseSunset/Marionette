@@ -5,3 +5,6 @@ Based on noe's [dollcode](https://noe.sh/dollcode/) standard, UnicodeToDollcode 
 
 ## Translates strings of dollcode into strings of unicode
 *If the dollcode being translated was originally text
+
+## TODO:
+- Solve multi-layer encoding/decoding
