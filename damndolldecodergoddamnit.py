@@ -3,8 +3,6 @@ import math
 
 #variables
 
-charmap = ["▌", "▖", "▘"]
-
 result = []
 
 userput = input("Dollcode to translate: ")
@@ -15,8 +13,6 @@ block = []
 chain = []
        
 #main
-
-#print(operand)
 
 for o in operand:
     #print("Highest Level:" + str(list(o)))
