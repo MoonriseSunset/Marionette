@@ -14,7 +14,6 @@ operand = userput.split(" ")
 block = []
 chain = []
 
-
 #functions
 def charToDecimal(characterInput):
 
