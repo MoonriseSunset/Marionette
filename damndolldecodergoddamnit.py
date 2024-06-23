@@ -5,11 +5,15 @@ import math
 
 charmap = ["▌", "▖", "▘"]
 
-output = []
+result = []
 
-userput = input("Text to translate: ")
+userput = input("Dollcode to translate: ")
 
-operand = list(userput)
+operand = userput.split(" ")
+
+block = []
+chain = []
+
 
 #functions
 def charToDecimal(characterInput):
@@ -40,16 +44,36 @@ def decToDollcode(userInput):
     
     return "".join(reversed(workingOutput))
             
-
-    #print("".join(reversed(workingOutput)))
-    #print("")
-
 #main
 
-for i in operand:
+#print(operand)
 
-    output.append(decToDollcode(i))
-    output.append("   ")
+for o in operand:
+    #print("Highest Level:" + str(list(o)))
+    decode = list(o)
+    for d in decode:
+        if(d == "▌"):
+            block.append("3")
+        elif(d == "▖"):
+            block.append("1")
+        elif(d == "▘"):
+            block.append("2")
+
     
+    fixedblock = list(reversed(block))
 
-print("".join(output))
+    p = 0
+    dec = 0
+    for f in fixedblock:
+        #print(f)
+        dec += (3 ** p)*int(f)
+        p += 1
+    #print(dec)
+    result.append(chr(dec))
+
+    #print("Raw Block:" + str(block))
+    #print("Fixed Block:" + str(fixedblock))
+    block.clear()
+    fixedblock.clear()
+print("".join(result))
+    
