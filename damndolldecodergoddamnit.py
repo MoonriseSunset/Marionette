@@ -1,6 +1,3 @@
-#imports
-import math
-
 #variables
 
 result = []
