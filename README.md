@@ -7,7 +7,8 @@ Based on noe's [dollcode](https://noe.sh/dollcode/) standard, UnicodeToDollcode 
 
 
 ## TODO:
-- Solve multi-layer encoding/decoding
+- [ ] Solve multi-layer encoding/decoding
+- [ ] Text file I/O
 
 
 <hr>
