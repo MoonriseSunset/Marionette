@@ -34,4 +34,6 @@ Based on noe's [dollcode](https://noe.sh/dollcode/) standard, Marionette can tra
 Originally, the project started with two separate python files one for encoding and one for decoding, however Moonrise consolidated the two into a single Class for ease of use. Check the WIP in-code comments for more info :) (*very WIP*)
 
 # ⚠️ DISCLAIMER ⚠️
-Moonrise is in no way associated or otherwise connected with Voidgoddess, Ziz, or anyone else involved in the creation(?) and proliferation of dolls. This is purely a fun esoteric encryption project that dolls and any entity, human or not, is free to use however they like. For translating pure hex, *not* characters, into dollcode, please refer to https://noe.sh/dollcode/. Thank you!
+- Moonrise is in no way associated or otherwise connected with the Voidgoddess site, Ziz, or anyone else involved in the creation(?) and proliferation of dolls. This is purely a fun esoteric encryption project that dolls and any entity, human or not, is free to use however they like. For translating pure hex, *not* characters, into dollcode, please refer to https://noe.sh/dollcode/. Thank you!
+
+- Kabalabax, while learning and versing itself in the ways of the winding fractal and becoming the combat doll it wishes to see on the battlefield, has no relation whatsoever to things within the circle of the Voidgoddess site, Ra, anyone.
