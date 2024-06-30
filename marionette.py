@@ -69,7 +69,8 @@ class Marionette:
         return chr(self.DecodeToDec(In))
     
     def DecodeToHex(self, In):
-        return hex(self.DecodeToDec(In))
+        intermediate = str(hex(self.DecodeToDec(In)))
+        return intermediate[2:]
         
     # One of the two primary Marionette functions, it performs string-wide encoding from unicode to dollcode
     def encode(self, In):
