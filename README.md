@@ -7,7 +7,7 @@ Based on noe's [dollcode](https://noe.sh/dollcode/) standard, Marionette can tra
 ## How to use:
 
 1. Clone the repo
-2. Run ``playground.py``
+2. Run ``empathy.py``
 3. Translate away through the terminal :)
 
 
@@ -23,10 +23,10 @@ Based on noe's [dollcode](https://noe.sh/dollcode/) standard, Marionette can tra
 
 # Technical breakdown:
 
-### ``playground.py``
+### ``empathy.py``
 ---
 
-``playground.py`` breaks out the functions from the core ``marionette.py`` into a terminal format. It's very simple, just a breakable infinite loop with ``if`` statements to trigger the different functions.
+``empathy.py`` breaks out the functions from the core ``marionette.py`` into a terminal format. It's very simple, just a breakable infinite loop with ``if`` statements to trigger the different functions.
 
 ### ``marionette.py``
 ---
