@@ -1,11 +1,13 @@
 # Marionette
 class Marionette:
 
-    def __init__(self):
+    def __init__(self, mode):
         self.charmap = ["▌", "▖", "▘"]
         self.decodemap = ["▖", "▘", "▌"]
 
         self.output = []
+
+        self.mode = mode
 
     def DecToDollcode(self, In):
 
@@ -38,6 +40,37 @@ class Marionette:
     def HexToDollcode(self, In):
 
         return self.DecToDollcode(int(In, 16))
+    
+    def DecodeToDecOLD(self, In):
+        #clear the output to make sure stuff doesn't get mixed up
+        self.output.clear()
+
+        result = []
+
+        block = []
+
+        decode = list(In)
+        for d in decode:
+            if(d == "▌"):
+                block.append("3")
+            elif(d == "▖"):
+                block.append("1")
+            elif(d == "▘"):
+                block.append("2")
+
+        fixedblock = list(reversed(block))
+
+        p = 0
+        dec = 0
+        for f in fixedblock:
+            dec += (3 ** p)*int(f)
+            p += 1
+
+        result.append(dec)
+        block.clear()
+        fixedblock.clear()
+
+        return result[0]
     
     def DecodeToDec(self, In):
         #clear the output to make sure stuff doesn't get mixed up
@@ -74,7 +107,6 @@ class Marionette:
         
     # One of the two primary Marionette functions, it performs string-wide encoding from unicode to dollcode
     def encode(self, In):
-        
         #clear the output to make sure stuff doesn't get mixed up
         self.output.clear()
 

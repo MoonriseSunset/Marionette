@@ -1,7 +1,7 @@
 #imports
 import marionette
 
-doll = marionette.Marionette()
+doll = marionette.Marionette("s")
 
 while True:
     prompt = input("e (encode), d (decode), or q to quit: ")
