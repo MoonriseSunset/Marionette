@@ -1,13 +1,12 @@
 # Marionette
 class Marionette:
 
-    def __init__(self, mode):
+    def __init__(self):
         self.charmap = ["▌", "▖", "▘"]
         self.decodemap = ["▖", "▘", "▌"]
 
         self.output = []
 
-        self.mode = mode
 
     def DecToDollcode(self, In):
 
@@ -108,7 +107,7 @@ class Marionette:
     # One of the two primary Marionette functions, it performs string-wide encoding from unicode to dollcode
     def encode(self, In):
         #clear the output to make sure stuff doesn't get mixed up
-        self.output.clear()
+        self.output.clear() 
 
         for o in list(In):
             self.output.append(self.CharToDollcode(o))
