@@ -5,8 +5,42 @@ class Marionette:
         self.charmap = ["▌", "▖", "▘"]
         self.decodemap = ["▖", "▘", "▌"]
 
+        self.validModes = ["s", "c", "h", "d", "l"]
+
         self.output = []
 
+        # Encode/Decode Modes, defaulting to string
+        # s = string, c = char, h = hex, d = dec
+        self.eMode = "s"
+
+        self.dMode = "s"
+    
+    def switchMode(self, decodeEncode, mode):
+
+        try:
+            M = self.validModes.index(mode)
+        except:
+            return -2    
+
+        if decodeEncode == "d":
+
+            if mode == "l":
+                return self.dMode
+            
+            self.dMode = mode
+            return mode
+        
+        elif decodeEncode == "e":
+
+            if mode == "l":
+                return self.eMode
+            
+            self.eMode = mode
+            return mode
+
+        else:
+            return -1
+            
 
     def DecToDollcode(self, In):
 
@@ -103,20 +137,8 @@ class Marionette:
     def DecodeToHex(self, In):
         intermediate = str(hex(self.DecodeToDec(In)))
         return intermediate[2:]
-        
-    # One of the two primary Marionette functions, it performs string-wide encoding from unicode to dollcode
-    def encode(self, In):
-        #clear the output to make sure stuff doesn't get mixed up
-        self.output.clear() 
-
-        for o in list(In):
-            self.output.append(self.CharToDollcode(o))
-            self.output.append(" ")
-
-        return "".join(self.output)
-
-    # The second primary Marionette function, it performs decoding from dollcode to unicode
-    def decode(self, In):
+    
+    def DecodeToString(self, In):
 
         #clear the output to make sure stuff doesn't get mixed up
         self.output.clear()
@@ -145,3 +167,44 @@ class Marionette:
             fixedblock.clear()
 
         return "".join(result)
+
+    # One of the two primary Marionette functions, it performs string-wide encoding from unicode to dollcode
+    def encode(self, In):
+        #clear the output to make sure stuff doesn't get mixed up
+        self.output.clear()
+
+        #Decimal Encode
+        if self.eMode == "d":
+            return self.DecToDollcode(In)
+        
+        #Hex Encode
+        elif self.eMode == "h":
+            return self.HexToDollcode(In)
+
+        #Char Encode
+        elif self.eMode == "c":
+            return self.CharToDollcode(In)
+        
+        #String Encode
+        else:
+            for o in list(In):
+                self.output.append(self.CharToDollcode(o))
+                self.output.append(" ")
+
+            return "".join(self.output)
+
+    # The second primary Marionette function, it performs decoding from dollcode to unicode
+    def decode(self, In):
+
+        if self.dMode == "d":
+            return self.DecodeToDec(In)
+        
+        elif self.dMode == "c":
+            return self.DecodeToChar(In)
+        
+        elif self.dMode == "h":
+            return self.DecodeToHex(In)
+        
+        else:
+            return self.DecodeToString(In)
+        
