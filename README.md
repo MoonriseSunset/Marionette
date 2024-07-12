@@ -13,7 +13,7 @@ Based on noe's [dollcode](https://noe.sh/dollcode/) standard, Marionette can tra
 
 ## *LIMITATIONS:*
 
-- **Cannot translate text files, only raw strings**
+- **Cannot translate text files, only raw strings, decimals, hex, and single chars**
 
 ## TODO:
 - [ ] Solve multi-layer encoding/decoding
