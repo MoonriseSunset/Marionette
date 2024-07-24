@@ -36,4 +36,4 @@ Originally, the project started with two separate python files one for encoding 
 # ⚠️ DISCLAIMER ⚠️
 - Moonrise is in no way associated or otherwise connected with the Voidgoddess site, Ziz, or anyone else involved in the creation(?) and proliferation of dolls. This is purely a fun esoteric encryption project that dolls and any entity, human or not, is free to use however they like. For translating pure hex, *not* unicode characters, into dollcode, please refer to https://noe.sh/dollcode/. Thank you!
 
-- Kabalabax, while learning and versing itself in the ways of the winding fractal and becoming the combat doll it wishes to see on the battlefield, has no relation whatsoever to things within the circle of the Voidgoddess site, Ra, anyone.
+- Kabalabax is a doll of sorts.
